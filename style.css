@@ -1,6 +1,7 @@
 :root {
     --accent-one: #475569;
     --accent-two: #64748b;
+    --accent-three: #e5e7eb;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
@@ -15,23 +16,114 @@ body {
     min-height: 100vh;
 }
 
-h1 {
+h1, h2, h3 {
     padding: 0;
     margin: 0;
+    color: white;
 }
 
 header {
     background-color: var(--accent-two);
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+}
+
+.img-placeholder {
+    height: 3rem;
+    width: 3rem;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+.img-placeholder-two {
+    height: 4rem;
+    width: 4rem;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+.search-left {
+    display: flex;
+    margin: 1rem;
+}
+
+.search-right {
+    justify-self: end;
+    margin: 1rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem
+}
+
+.search-container {
+    display: flex;
+}
+
+[type="search"] {
+-webkit-appearance: none;
+appearance: none;
+border-radius: 25px;
+border: none;
+background-color: var(--accent-three);
+outline: none;
+font-size: 1rem;
+padding: .5rem 1rem;
+margin: 1rem;
+width: 80%;
+border: 1px solid transparent;
+color: #4b5563;
+caret-color: #4b5563;
+}
+
+[type="search"]:hover,
+[type="search"]:focus {
+    background-color: #d1d5db;
+    border: 1px solid #6b7280;
+}
+
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.header-content {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-self: start;
+    justify-items: start;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem;
+}
+
+.header-buttons {
+    justify-self: end;
+    align-self: center;
+    margin: 0 2rem;
+}
+
+.header-buttons > button {
+    -webkit-appearance: none;
+    appearance: none;
+    font-size: 1rem;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    min-width: 20%;
+    text-align: center;
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: var(--accent-one);
 }
 
 .sidebar > div {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-}
-
-.header-icon {
-    width: 2rem;
+    gap: 1rem;
 }
 
 .sidebar {
@@ -65,4 +157,6 @@ header {
 
 .icon {
     width: 1.5rem;
+    fill: white;
 }
+
