@@ -103,6 +103,9 @@ caret-color: #4b5563;
     justify-self: end;
     align-self: center;
     margin: 0 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
 .header-buttons > button {
@@ -111,7 +114,7 @@ caret-color: #4b5563;
     font-size: 1rem;
     padding: 1rem 2rem;
     border-radius: 25px;
-    min-width: 20%;
+    flex: 1 1 0;
     text-align: center;
     border: none;
     color: white;
@@ -214,4 +217,96 @@ article svg > path {
 
 article svg:hover > path {
     fill: gold;
+}
+
+.right-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.right-top {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0px 2px 7px 1px grey;
+}
+
+.right-top-content {
+    border-bottom: 1px solid var(--accent-two);
+    padding: 0.5rem;
+}
+
+.right-top-content h3,
+.right-top-content p {
+    margin: 0;
+    padding: 0;
+}
+
+.right-top-content > h3 {
+    color: var(--accent-one);
+}
+
+.right-top-content > p {
+    color: var(--accent-two);
+    font-size: .8rem;
+}
+
+.right-bottom {
+    align-self: end;
+    border-radius: 5px;
+}
+
+.right-bottom > h3 {
+    color: var(--accent-one);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.right-bottom-content {
+    background: white
+}
+
+.img-placeholder-bottom {
+    height: 3rem;
+    width: 3rem;
+    border: 2px solid var(--accent-one);
+    border-radius: 50%;
+}
+
+.right-bottom-text > p,
+.right-bottom-text > h3 {
+    padding: 0;
+    margin: 0;
+}
+
+.right-bottom-text > h3 {
+    color: var(--accent-one);
+}
+
+.right-bottom-text > p {
+    color: var(--accent-two);
+    font-size: .8rem;
+}
+
+.right-bottom-content {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.right-bottom-content:first-of-type {
+    border-radius: 8px 8px 0 0;
+}
+
+.right-bottom-content:last-of-type {
+    border-radius: 0 0 8px 8px;
+}
+
+.right-bottom-content-container {
+    box-shadow: 0px 2px 7px 1px grey;
 }
